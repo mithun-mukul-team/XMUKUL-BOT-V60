@@ -4,7 +4,7 @@ const request = require("request");
 
 module.exports.config = {
 	name: "help",
-	version: "3.1.0",
+	version: "3.2.0",
 	hasPermssion: 0,
 	credits: "🔰𝐑𝐀𝐇𝐀𝐓 𝐈𝐒𝐋𝐀𝐌🔰",
 	description: "style help menu",
@@ -35,29 +35,30 @@ module.exports.languages = {
 ╰━━━━━━━━━━━━━━━━╯`
 	}
 };
-async function getGifAttachment() {
-	const gifs = (global.client.helpGifs && global.client.helpGifs.length) ? global.client.helpGifs : [];
-	if (gifs.length === 0) return { attachments: [], cleanup: () => {} };
 
-	const gifUrl = gifs[Math.floor(Math.random() * gifs.length)];
-	const gifPath = path.join(__dirname, `help_gif_${Date.now()}_${Math.floor(Math.random() * 100000)}.gif`);
+// আগে global.client.helpGifs থেকে র‍্যান্ডম GIF আসত — এখন সবসময় এই ফিক্সড ছবিটাই যাবে
+const HELP_IMAGE_URL = "https://i.postimg.cc/3NnCyxVR/received-2474121659736139.jpg";
+
+async function getHelpImageAttachment() {
+	const imgPath = path.join(__dirname, `help_img_${Date.now()}_${Math.floor(Math.random() * 100000)}.jpg`);
 
 	try {
 		await new Promise((resolve, reject) => {
-			request(encodeURI(gifUrl))
-				.pipe(fs.createWriteStream(gifPath))
+			request(encodeURI(HELP_IMAGE_URL))
+				.pipe(fs.createWriteStream(imgPath))
 				.on("close", resolve)
 				.on("error", reject);
 		});
 		return {
-			attachments: [fs.createReadStream(gifPath)],
-			cleanup: () => { if (fs.existsSync(gifPath)) fs.unlinkSync(gifPath); }
+			attachments: [fs.createReadStream(imgPath)],
+			cleanup: () => { if (fs.existsSync(imgPath)) fs.unlinkSync(imgPath); }
 		};
 	} catch (error) {
-		console.error("[HELP] GIF ডাউনলোডে সমস্যা:", error.message);
+		console.error("[HELP] ছবি ডাউনলোডে সমস্যা:", error.message);
 		return { attachments: [], cleanup: () => {} };
 	}
 }
+
 module.exports.run = async function ({ api, event, args, getText }) {
 	const { commands } = global.client;
 	const { threadID, messageID } = event;
@@ -79,7 +80,7 @@ module.exports.run = async function ({ api, event, args, getText }) {
 		);
 
 		try {
-			const { attachments, cleanup } = await getGifAttachment();
+			const { attachments, cleanup } = await getHelpImageAttachment();
 
 			return api.sendMessage({
 				body: msg,
@@ -133,7 +134,7 @@ let isFirstGroup = true;
 ┃ 👑 𝗢𝗪𝗡𝗘𝗥: ${global.config.Xrahat_Name || ""}
 ╰━━━━━━━━━━━━━━━━╯`;
 	try {
-		const { attachments, cleanup } = await getGifAttachment();
+		const { attachments, cleanup } = await getHelpImageAttachment();
 api.sendMessage({
 			body: body,
 			attachment: attachments
