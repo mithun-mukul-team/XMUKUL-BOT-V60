@@ -1,14 +1,15 @@
+# MUKUL/RAHAT BOT™✓
+<p align="center">
+  <img src="https://i.imgur.com/w6ZA3hR.jpeg" https="400">
+</p>
 <br />
 <p align="center">
-    <a href="https://github.com/Xrahat-Dev/Xrahat-BoT.git">
+    <a href="https://https://github.com/mukulislam-c10/-.git
         <img src="https://i.postimg.cc/Vsnh7S1c/Xrahat-Dev.jpg" alt="Logo">
     </a>
     <p align="center">
 <a href="https://t.me/education_of_purpose" target="_blank">
   <img src="https://discordhub.net/emojis/cute-dance.gif" width="30">
-</a>
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=52&pause=1000&color=87CEEB&center=true&vCenter=true&width=700&lines=%F0%9F%94%B0+Rahat+BoT+%F0%9F%94%B0" />
-</p>
 
 ## 📹 𝗦𝗲𝘁𝘂𝗽 𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹
 
@@ -33,7 +34,7 @@ Click thumbnail to watch full tutorial👆🏻
 <div align="center">
 
   <!-- ⭐ Fork -->
-  <img src="https://img.shields.io/github/forks/Xrahat-Dev/Xrahat-BoT?style=for-the-badge" alt="Forks">
+  https://github.com/mukulislam-c10/-.git
 
   <!-- ⭐ Stars -->
   <img src="https://img.shields.io/github/stars/Xrahat-Dev/Xrahat-BoT?style=for-the-badge" alt="Stars">
