@@ -35,17 +35,17 @@
         },
         "_notes": "Two-account mode, used by the 'accountswitch' command (Goat bot). Primary account = your normal EMAIL/PASSWORD + appstate.json. Fill secondaryAccount here if you want a second account to auto-switch to on MQTT errors (autoSwitchOnError)."
     },
-    "BOTNAME": "👑⏤͟͟͞͞𝐒𝐢𝐟𝐚𝐭ᥫ᭡𝐁𝐛'𝐳—͞👑",
-    "Xrahat_Name": "👑⏤͟͟͞͞𝐒𝐢𝐟𝐚𝐭ᥫ᭡𝐁𝐛'𝐳—͞👑",
+    "BOTNAME": "👑👑 🅧🅜🅤🅚🅤🅛🅑🅞🅣 👑👑",
+    "Xrahat_Name": "👑👑 🅢🅚 🅜🅤🅚🅤🅛 🅑🅞🅢🅢 👑👑",
     "Xrahat_resend": true,
-    "PREFIX": ",",
+    "PREFIX": ".",
     "ADMINBOT": [
-        "61590756236993",
-        "61592607158000",
+        "61574286011307",
+        "61574286011307",
         "61574286011307"
     ],
     "NDH": [
-        "61590756236993"
+        "61574286011307"
     ],
     "DATABASE": {
         "sqlite": {
